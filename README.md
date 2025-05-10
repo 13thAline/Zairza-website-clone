@@ -1,3 +1,10 @@
 # Zairza-website-clone
 
-Hello, my first commit.
+PROJECT CONTRIBUTORS 
+
+SAILEN SAHOO (@13thALine)
+PRATEEK DAS
+SNEHA TRIPATHY
+RAKSHIT KUMAR MOHANTY
+
+            
