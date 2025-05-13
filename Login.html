@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zairzest 4.0 - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .left-panel {
+            flex: 1;
+            background-image: url('https://zairzest.zairza.co.in/static/media/auth_bg.6f3fffecc27bb1aef6e1.webp');
+            background-size: cover;
+            background-position: left;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+        }
+        .left-panel h1 {
+            width: 700px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            padding-left: 115px;
+            color: #FFF;
+            font-family: 'Outfit', sans-serif;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 750;
+            line-height: 72px; 
+            letter-spacing: -1.2px;
+            
+        }
+        .left-panel p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            padding-left: 115px;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            padding-bottom: 40px;
+        }
+        .right-panel {
+            margin-bottom: 20%;
+            padding-bottom: 20%;
+            
+            background: #FFF;
+            width: 420px;
+            height: 550px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           padding: 0;
+        }
+        .right-panel h2 {
+            margin-top: 20px;
+            padding-top: 40%;
+            width: 100%;
+            padding-left:33px ;
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 20px;
+            color: #00BFFF;
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            line-height: 40px;
+        }
+        .right-panel p {
+            
+            color: #858585;
+            font-family: Gilroy-LightItalic;
+            font-size: 20px;
+            text-align: left;
+            font-weight: 250;
+            line-height: 20px; 
+            padding-right: 135px;
+        }
+        .form {
+            width: 100%;
+            max-width: 350px;
+        }
+        .form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .form button {
+            width: 33%;
+            background-color: #00BFFF;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 100px;
+            margin-top: 20px;
+            margin-bottom: 100px;
+            display: inline-flex;
+            padding: 16px 32px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .form small {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .form a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Enter the untamed <br> wilderness with <br>ZAIRZA</h1>
+            <p>Release all your stress with the exciting Tech and Fun<br> events in the most awaited fest. Zairzest 4.0 <br>presented by Zairza.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Become the Beast of the Cyber Forest</h2>
+            <p>Sign In to get into Zairzest</p>
+            <form class="form">
+                <input type="email" placeholder="Email here" required>
+                <input type="password" placeholder="Password" required>
+                <small>Don't remember Password? <a href="#"style="text-decoration: underline;">Reset Password</a>
+                <small>Not a Member yet? <a href="#"style="text-decoration: underline;">Sign Up</a> </small>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
