@@ -5,75 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <div id="preloader">
-    <div class="loader">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="index.html" class="zairzest-logo">ZAIRZEST <span class="version"> 4.0</span></a>
+      </div>
+      <nav class="navbar-right">
+        <a href="aboutus.html" class="nav-link">About Us</a>
+        <a href="register2.html" class="nav-link">Register</a>
+        <a href="Login.html" class="nav-link">Sign In</a>
+      </nav>
     </div>
-  </div>
-
-  <script>
-    const MIN_PRELOAD_TIME = 2000;
-
-    const preloader = document.getElementById("preloader");
-    const content = document.getElementById("content");
-    const start = Date.now();
-
-    window.addEventListener("load", function () {
-      const elapsed = Date.now() - start;
-      const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
-
-      setTimeout(() => {
-        preloader.style.display = "none";
-        content.style.display = "block";
-      }, remaining);
-    });
-  </script>
-    <style>
-        *{
-            background-color: #000000;
-            color:#ffffff;
-           
-        }
-        h1{
-            width : 100%;
+    <section class="Dalla">
+    <h1>Zairza: Igniting Innovation</h1>
+    <p style="color: #CBCBCB;
             font-family: 'Outfit', sans-serif;
-            font-size: 60px;
-            font-weight: bolder;
-            text-align: left;
-            margin-top: 20;
-            padding-left: 60px;
-            justify-content: center;
-        }
-        body{
-            font-family: 'Outfit', sans-serif;
-            font-size: 20px;
-            text-align: left;
-            margin-top: 20;
-            padding-left: 60px;
-            justify-content: center;
-        }
-        p{
-            color: #cbcbcb;
             font-weight: bold;
             font-size: 15px;
             text-align: left;
-            padding-right:60px;
-            padding-left: 60px;
-            justify-content: center;
-        }
-        img{
-            width: 500px;
-            height: 300px;
-            
-        }
-    </style>
-
-</head>
-<body>
-    <h1>Zairza: Igniting Innovation</h1>
-    <p>
+            padding-right:200px;
+            padding-left: 200px;
+            justify-content: center;">
           Zairza, more than just a club, is a vibrant community of tech
           enthusiasts at Odisha University of Technology and Research. Rooted in
           our motto, "Wonder, Think, Create," we've been pushing the boundaries
@@ -97,15 +54,40 @@
           <br> 
           <br>Join Zairza and be part of a legacy
           of innovation. Together, we'll shape the future of technology.
-        </p>
-        <p>
-    
-            <img src="https://zairzest.zairza.co.in/static/media/frame-1.73cf465271f43437610e.png" alt="Img1"/>
-            <img src="https://zairzest.zairza.co.in/static/media/frame-2.ce973fa3289e91663090.png" />
-            <br>
-            <img src="https://zairzest.zairza.co.in/static/media/frame-3.c6b11f4c05d88c7800c9.png" />
-            <img src="https://zairzest.zairza.co.in/static/media/frame-4.ca6f19f9780d333df5ea.png" />
-            </p>
+    </p>
+    <p>
+        <div class="cry">
+        <img src="https://zairzest.zairza.co.in/static/media/frame-1.73cf465271f43437610e.png" alt="Img1"/>
+        <img src="https://zairzest.zairza.co.in/static/media/frame-2.ce973fa3289e91663090.png" />
+        <br>
+        <img src="https://zairzest.zairza.co.in/static/media/frame-3.c6b11f4c05d88c7800c9.png" />
+        <img src="https://zairzest.zairza.co.in/static/media/frame-4.ca6f19f9780d333df5ea.png" />
+        </div>
+    </p>
+    <footer class="footer">
+    <div class="footer-left">
+      <h2>Want to Know<br>about us ?</h2>
+      <p>Come and know more about Zairza and join our community to experience such more amazing stuffs.</p>
+      <address>
+        OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha.<br>
+        +91 8984344805
+      </address>
+    </div>
 
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+        <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+        <a href="https://youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
+        <a href="mailto:someone@example.com"><i class='bx bx-envelope'></i></a>
+        <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      </div>
+      <div class="presented-by" style="font-family: 'Outfit';">
+        Presented by
+        <img src="media/zairzaLogo.webp" alt="Logo">
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
