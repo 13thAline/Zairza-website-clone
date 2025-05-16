@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <div id="preloader">
+    <div class="loader">
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+    </div>
+  </div>
     <section class="events-board">
     <div class="navbar">
       <div class="navbar-left">
@@ -140,6 +147,22 @@
     </div>
     </div>
     <script>
+    const MIN_PRELOAD_TIME = 2000;
+
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+    const start = Date.now();
+
+    window.addEventListener("load", function () {
+      const elapsed = Date.now() - start;
+      const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
+
+      setTimeout(() => {
+        preloader.style.display = "none";
+        content.style.display = "block";
+      }, remaining);
+    });
+        <!--Button flip animation-->
         const flipButtons = document.querySelectorAll('.flip-btn');
         const backButtons = document.querySelectorAll('.back-btn');
 

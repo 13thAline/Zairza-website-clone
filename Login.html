@@ -6,6 +6,7 @@
     <title>Zairzest 4.0 - Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         * {
             box-sizing: border-box;
@@ -136,6 +137,31 @@
     </style>
 </head>
 <body>
+    <div id="preloader">
+    <div class="loader">
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <script>
+    const MIN_PRELOAD_TIME = 2000;
+
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+    const start = Date.now();
+
+    window.addEventListener("load", function () {
+      const elapsed = Date.now() - start;
+      const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
+
+      setTimeout(() => {
+        preloader.style.display = "none";
+        content.style.display = "block";
+      }, remaining);
+    });
+    </script>
     <div class="container">
         <div class="left-panel">
             <h1>Enter the untamed <br> wilderness with <br>ZAIRZA</h1>
