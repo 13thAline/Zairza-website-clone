@@ -10,32 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-    <div id="preloader">
+<body class="no-scroll">
+  <div id="preloader">
     <div class="loader">
       <div></div><div></div><div></div>
       <div></div><div></div><div></div>
       <div></div><div></div><div></div>
     </div>
   </div>
-
-  <script>
-    const MIN_PRELOAD_TIME = 2000;
-
-    const preloader = document.getElementById("preloader");
-    const content = document.getElementById("content");
-    const start = Date.now();
-
-    window.addEventListener("load", function () {
-      const elapsed = Date.now() - start;
-      const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
-
-      setTimeout(() => {
-        preloader.style.display = "none";
-        content.style.display = "block";
-      }, remaining);
-    });
-  </script>
+  <div id="content">
     <div class="navbar">
       <div class="navbar-left">
         <a href="index.html" class="zairzest-logo">ZAIRZEST <span class="version"> 4.0</span></a>
@@ -47,7 +30,8 @@
       </nav>
     </div>
     <section class="Dalla">
-    <h1>Zairza: Igniting Innovation</h1>
+    <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">Zairza: Igniting Innovation</h1>
+    <br>
     <p style="color: #CBCBCB;
             font-family: 'Outfit', sans-serif;
             font-weight: bold;
@@ -55,7 +39,7 @@
             text-align: left;
             padding-right:200px;
             padding-left: 200px;
-            justify-content: center;">
+            justify-content: center;" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
           Zairza, more than just a club, is a vibrant community of tech
           enthusiasts at Odisha University of Technology and Research. Rooted in
           our motto, "Wonder, Think, Create," we've been pushing the boundaries
@@ -81,7 +65,7 @@
           of innovation. Together, we'll shape the future of technology.
     </p>
     <p>
-        <div class="cry">
+        <div class="cry" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
         <img src="https://zairzest.zairza.co.in/static/media/frame-1.73cf465271f43437610e.png" alt="Img1"/>
         <img src="https://zairzest.zairza.co.in/static/media/frame-2.ce973fa3289e91663090.png" />
         <br>
@@ -114,5 +98,26 @@
       </div>
     </div>
   </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  const MIN_PRELOAD_TIME = 3000;
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("content");
+  const body = document.body;
+  const start = Date.now();
+
+  window.addEventListener("load", () => {
+    const elapsed = Date.now() - start;
+    const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
+
+    setTimeout(() => {
+      preloader.style.display = "none";
+      body.classList.remove("no-scroll");
+      content.classList.add("show");
+
+      AOS.init();
+    }, remaining);
+  });
+  </script>
 </body>
 </html>
