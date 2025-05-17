@@ -1,3 +1,7 @@
+.no-scroll {
+  overflow: hidden;
+}
+
 #preloader {
   position: fixed;
   top: 0;
@@ -8,10 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Very high z-index */
+  z-index: 9999;
 }
 
-/* Loader Grid */
 .loader {
   width: 48px;
   height: 48px;
@@ -20,7 +23,6 @@
   gap: 2px;
 }
 
-/* Individual Squares */
 .loader div {
   width: 14px;
   height: 14px;
@@ -28,7 +30,6 @@
   animation: fade 1.2s infinite ease-in-out;
 }
 
-/* Animation delay for wave effect */
 .loader div:nth-child(1) { animation-delay: 0.1s; }
 .loader div:nth-child(2) { animation-delay: 0.2s; }
 .loader div:nth-child(3) { animation-delay: 0.3s; }
@@ -39,7 +40,6 @@
 .loader div:nth-child(8) { animation-delay: 0.8s; }
 .loader div:nth-child(9) { animation-delay: 0.9s; }
 
-/* Keyframe animation */
 @keyframes fade {
   0%, 100% {
     opacity: 0.2;
@@ -48,6 +48,18 @@
     opacity: 1;
   }
 }
+
+#content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+#content.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 * {
     margin: 0;
@@ -209,7 +221,7 @@ html {
   transform: scale(1.1);
   background-color: #38CCFF;
   color: #ffffff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.7s ease, color 0.7s ease;
 }
 
 .hero-btn2{
@@ -303,6 +315,11 @@ html {
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.event-card:hover{
+  scale: 1.1;
+    transition: all 0.5s;
 }
 
 .event-card img {
@@ -460,18 +477,18 @@ html {
 
 .events-board{
   width: 100%;
-  height: 200vh;
+  height: 210vh;
   background-color: #111111;
 }
 
 .card-container2 {
   perspective: 1000px;
-  width: 300px;
+  width: 350px;
 }
 
 .card {
   width: 100%;
-  height: 500px;
+  height: 585px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s;
@@ -494,7 +511,7 @@ html {
 .card-front img {
   margin: 20px;
   width: relative;
-  height: 320px;
+  height: 385px;
   object-fit: cover;
 }
 
@@ -511,11 +528,21 @@ html {
 }
 
 .card-back {
-  background: #1f9dc2;
-  color: white;
+  background: linear-gradient(to bottom, #008CFF, #000000); /* Gradient background */
   transform: rotateY(180deg);
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back p {
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
 }
 
 .card.flipped {
@@ -524,14 +551,13 @@ html {
 
 .back-btn {
   margin-top: 20px;
+  padding: 10px 15px;
   background-color: #38CCFF;
-  color: #111;
+  color: black;
   border: none;
-  padding: 10px 16px;
-  font-weight: bold;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  font-weight: bold;
 }
 
 .back-btn:hover {
@@ -542,7 +568,7 @@ html {
   margin: 0px 50px;
   display: flex;
   flex-wrap: wrap;
-  gap: 100px 100px;
+  gap: 40px 70px;
   justify-content: center;
 }
 

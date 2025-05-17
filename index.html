@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-  <!-- Preloader Overlay -->
+<body class="no-scroll">
+  <!-- Preloader -->
   <div id="preloader">
     <div class="loader">
       <div></div><div></div><div></div>
@@ -18,28 +18,11 @@
       <div></div><div></div><div></div>
     </div>
   </div>
-
-  <script>
-    const MIN_PRELOAD_TIME = 2000;
-
-    const preloader = document.getElementById("preloader");
-    const content = document.getElementById("content");
-    const start = Date.now();
-
-    window.addEventListener("load", function () {
-      const elapsed = Date.now() - start;
-      const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
-
-      setTimeout(() => {
-        preloader.style.display = "none";
-        content.style.display = "block";
-      }, remaining);
-    });
-  </script>
+  <div id="content">
   <section class = "header">
     <div class="navbar">
       <div class="navbar-left">
-        <a href="index.html" class="zairzest-logo">ZAIRZEST <span class="version"> 4.0</span></a>
+        <a href="index.html" class="zairzest-logo" >ZAIRZEST <span class="version"> 4.0</span></a>
       </div>
       <nav class="navbar-right">
         <a href="aboutus.html" class="nav-link">About Us</a>
@@ -48,16 +31,16 @@
       </nav>
     </div>
     <div class="text-box">
-      <h1 class="left-head">Hunt the Future in the</h1>
-      <h1 class="left-head2">Cyber Forest</h1>
+      <h1 class="left-head" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Hunt the Future in the</h1>
+      <h1 class="left-head2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Cyber Forest</h1>
     </div>
-    <div class="button">
+    <div class="button" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
       <a href="#event-section" class="hero-btn">Explore Events</a>
       <a href="register2.html" class="hero-btn2">Register Now</a>
     </div>
   </section>
   <section class="zen">
-    <div class="cyber-container">
+    <div class="cyber-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
     <div class="cyber-image">
       <img src="media/zen.webp" alt="Cyber Warrior on Bear" />
     </div>
@@ -80,10 +63,10 @@
   </section>
   <section id="event-section">
     <div class="Events-for-you">
-      <h1 class="head">Events for you</h1>
+      <h1 class="head" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Events for you</h1>
       <br>
-      <p class="para">Everything has been made simple for you to scroll around and get the most out </p>
-      <p class="para">of the options available.</p>
+      <p class="para" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Everything has been made simple for you to scroll around and get the most out </p>
+      <p class="para" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">of the options available.</p>
       <br>
       <br>
       <div class="card-container">
@@ -133,6 +116,28 @@
       </div>
     </div>
   </footer>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  const MIN_PRELOAD_TIME = 3000;
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("content");
+  const body = document.body;
+  const start = Date.now();
+
+  window.addEventListener("load", () => {
+    const elapsed = Date.now() - start;
+    const remaining = Math.max(MIN_PRELOAD_TIME - elapsed, 0);
+
+    setTimeout(() => {
+      preloader.style.display = "none";
+      body.classList.remove("no-scroll");
+      content.classList.add("show");
+
+      AOS.init();
+    }, remaining);
+  });
+</script>
 </body>
 </html>
 </body>
