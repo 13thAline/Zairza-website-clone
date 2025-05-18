@@ -140,6 +140,19 @@
     </div>
     </div>
     </div>
+    <div class="music">
+  <div class="music-button">
+    <div class="ripple-wrapper">
+      <span class="ripple"></span>
+      <span class="ripple"></span>
+      <span class="ripple"></span>
+      <div class="video" id="playPauseBtn">
+        <i id="playPauseIcon" class="fa fa-play"></i>
+        <audio id="music" src="media/ZairzaMusic.mp3"></audio>
+      </div>
+    </div>
+  </div>
+</div>
     <script>
     const MIN_PRELOAD_TIME = 3000;
     const preloader = document.getElementById("preloader");
@@ -176,6 +189,21 @@
             card.classList.remove('flipped');
         });
         });
+        const playPauseBtn = document.getElementById("playPauseBtn");
+  const playPauseIcon = document.getElementById("playPauseIcon");
+  const music = document.getElementById("music");
+
+  playPauseBtn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      playPauseIcon.classList.remove("fa-play");
+      playPauseIcon.classList.add("fa-pause");
+    } else {
+      music.pause();
+      playPauseIcon.classList.remove("fa-pause");
+      playPauseIcon.classList.add("fa-play");
+    }
+  });
     </script>
     </section>
     <footer class="footer">
