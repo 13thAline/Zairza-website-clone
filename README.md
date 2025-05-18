@@ -11,17 +11,11 @@ SNEHA TRIPATHY
 RAKSHIT KUMAR MOHANTY
 
 TASKS DONE
-<br>
 1. LANDING PAGE - Sailen Sahoo
-<br>
 2. TECH EVENTS - Sailen Sahoo
-<br>
 3. FUN EVENTS - Sailen Sahoo
-<br>
 4. SIGN IN PAGE - SNEHA TRIPATHY
-<br>
 5. LOGIN PAGE - SNEHA TRIPATHY
-<br>
 6. ABOUT US - PRATEEK DAS
 
             
